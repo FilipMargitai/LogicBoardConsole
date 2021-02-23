@@ -1,4 +1,4 @@
-#LogicBoardConsole#
+# LogicBoardConsole #
 
 Console program that allows user to create, run, edit, save and load logic boards.
 
