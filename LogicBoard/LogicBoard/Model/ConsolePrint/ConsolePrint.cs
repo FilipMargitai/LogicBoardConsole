@@ -19,11 +19,11 @@ namespace LogicBoard.Model.ConsolePrint
                             Console.ForegroundColor = ConsoleColor.Green;
                         }
                     }
-                    foreach (var input in logicGate.Outputs)    //  outputs - red
+                    foreach (var input in logicGate.Outputs)    //  outputs - yellow
                     {
                         if (i == input.xPosition && j == input.yPosition)
                         {
-                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
                         }
                     }
                     Console.Write(logicGate.Image[i, j]);   //  character

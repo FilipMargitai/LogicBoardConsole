@@ -10,7 +10,11 @@ namespace LogicBoard
         {
             var test = new Components();
 
-            ConsolePrint.DrawGate(test.LogicGates[0]);
+            foreach(var item in test.LogicGates)
+            {
+                ConsolePrint.DrawGate(item);
+                Console.WriteLine();
+            }
         }
     }
 }
