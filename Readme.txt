@@ -64,8 +64,11 @@ A->
   
 This is the list of all outputs, the program supports:  
   
-LED(changes colour depending on status - on, off)  
->█  
+LED
+off  
+>░ 
+on
+>█ 
   
   
 Some other characters that are used for drawing circuits:  

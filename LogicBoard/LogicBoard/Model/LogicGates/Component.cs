@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LogicBoard.Model
 {
-    enum LogicGateType
+    enum ComponentType
     {
         NOT,
         AND,
@@ -13,24 +13,30 @@ namespace LogicBoard.Model
         XOR,
         NAND,
         NOR,
-        XNOR
+        XNOR,
+        LED,
+        Switch
     }
-    class LogicGate
+    class Component
     {
-        public LogicGate(LogicGateType logicGateType, char[,] image, InputOutput[] inputs, InputOutput[] outputs)
+        public Component(ComponentType componentType, char[,] image, InputOutput[] inputs, InputOutput[] outputs)
         {
-            LogicGateType = logicGateType;
+            ComponentType = componentType;
             Image = image;
             Inputs = inputs;
             Outputs = outputs;
             Height = Image.GetLength(0); //rows
             Width = Image.GetLength(1); //columns
         }
-        public LogicGateType LogicGateType { get; }
+        public ComponentType ComponentType { get; }
         public char[,] Image { get; }
         public InputOutput[] Inputs { get; }
         public InputOutput[] Outputs { get; }
         public int Height { get; }
         public int Width { get; }
+        public override string ToString()
+        {
+            return ComponentType.ToString();
+        }
     }
 }
