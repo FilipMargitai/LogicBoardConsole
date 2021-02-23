@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LogicBoard.Data;
+using LogicBoard.Model.ConsolePrint;
+using System;
 
 namespace LogicBoard
 {
@@ -6,7 +8,9 @@ namespace LogicBoard
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var test = new Components();
+
+            ConsolePrint.DrawGate(test.LogicGates[0]);
         }
     }
 }
