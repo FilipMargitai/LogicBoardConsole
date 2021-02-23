@@ -1,5 +1,3 @@
-# LogicBoardConsole  
-  
 Console program that allows user to create, run, edit, save and load logic boards.  
   
 Whole application is created in C# .NET Core console, as a free time project.  
@@ -22,7 +20,7 @@ C|>──────────>│&&
 This is the list of all logic gates, the program supports:  
   
 NOT  
-──────|>o───────  
+────────|>o───────  
   
 AND  
 ───────>│&&  
