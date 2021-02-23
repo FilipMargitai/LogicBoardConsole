@@ -77,7 +77,7 @@ namespace LogicBoard.Data
         {
             new Component(
                 ComponentType.LED,
-                new char[1,2]{ { '>', '█'} },
+                new char[1,2]{ { '>', '░' } },
                 new InputOutput[1]{ new InputOutput(0, 0) },
                 new InputOutput[0])
         };
