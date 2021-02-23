@@ -1,3 +1,5 @@
+#LogicBoardConsole#
+
 Console program that allows user to create, run, edit, save and load logic boards.
 
 Whole application is created in C# .NET Core console, as a free time project.
@@ -8,13 +10,13 @@ It is and editor as well as a simulator, it should also be able to run circuits 
 
 Circuit example (should be able to edit and run):
 
-A>────|>o───>│&&
-             │&&>────┐
-B>────|>o───>│&&     └>│OR
+A|>────|>o───>│&&
+              │&&>────┐
+B|>────|>o───>│&&     └>│OR
                        │OR>────>█
-B>──────────>│&&     ┌>│OR
-             │&&>────┘
-C>──────────>│&&
+B|>──────────>│&&     ┌>│OR
+              │&&>────┘
+C|>──────────>│&&
 
 
 This is the list of all logic gates, the program supports:
@@ -59,7 +61,7 @@ Switch
 Off
 A|>
 On
-A─>
+A->
 
 
 This is the list of all outputs, the program supports:
