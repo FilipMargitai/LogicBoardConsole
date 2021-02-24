@@ -38,19 +38,19 @@ XOR
 ───────>│XO  
   
 NAND  
-──────o>│&&  
+───────>│&&  
 	│&&>o───  
-──────o>│&&  
+───────>│&&  
   
 NOR  
-──────o>│OR  
+───────>│OR  
 	│OR>o───  
-──────o>│OR  
+───────>│OR  
   
 XNOR  
-──────o>│XO  
+───────>│XO  
 	│XO>o───  
-──────o>│XO  
+───────>│XO  
   
   
 This is the list of all inputs, the program supports:  

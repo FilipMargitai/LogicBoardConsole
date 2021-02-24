@@ -42,28 +42,28 @@ namespace LogicBoard.Data
                 new InputOutput[1]{ new InputOutput(1, 4) }),
             new Component(
                 ComponentType.NAND,
-                new char[3,7]{ { 'o', '>', '|', '&', '&', ' ', ' '},
-                               { ' ', ' ', '|', '&', '&', '>', 'o'},
-                               { 'o', '>', '|', '&', '&', ' ', ' '},
+                new char[3,6]{ { '>', '|', '&', '&', ' ', ' '},
+                               { ' ', '|', '&', '&', '>', 'o'},
+                               { '>', '|', '&', '&', ' ', ' '},
                 },
                 new InputOutput[2]{ new InputOutput(0, 0), new InputOutput(2, 0)},
-                new InputOutput[1]{ new InputOutput(1, 6) }),
+                new InputOutput[1]{ new InputOutput(1, 5) }),
             new Component(
                 ComponentType.NOR,
-                new char[3,7]{ { 'o', '>', '|', 'O', 'R', ' ', ' '},
-                               { ' ', ' ', '|', 'O', 'R', '>', 'o'},
-                               { 'o', '>', '|', 'O', 'R', ' ', ' '},
+                new char[3,6]{ { '>', '|', 'O', 'R', ' ', ' '},
+                               { ' ', '|', 'O', 'R', '>', 'o'},
+                               { '>', '|', 'O', 'R', ' ', ' '},
                 },
                 new InputOutput[2]{ new InputOutput(0, 0), new InputOutput(2, 0)},
-                new InputOutput[1]{ new InputOutput(1, 6) }),
+                new InputOutput[1]{ new InputOutput(1, 5) }),
             new Component(
                 ComponentType.XNOR,
-                new char[3,7]{ { 'o', '>', '|', 'X', 'O', ' ', ' '},
-                               { ' ', ' ', '|', 'X', 'O', '>', 'o'},
-                               { 'o', '>', '|', 'X', 'O', ' ', ' '},
+                new char[3,6]{ { '>', '|', 'X', 'O', ' ', ' '},
+                               { ' ', '|', 'X', 'O', '>', 'o'},
+                               { '>', '|', 'X', 'O', ' ', ' '},
                 },
                 new InputOutput[2]{ new InputOutput(0, 0), new InputOutput(2, 0)},
-                new InputOutput[1]{ new InputOutput(1, 6) })
+                new InputOutput[1]{ new InputOutput(1, 5) })
         };
         public List<Component> Input = new List<Component>()
         {
