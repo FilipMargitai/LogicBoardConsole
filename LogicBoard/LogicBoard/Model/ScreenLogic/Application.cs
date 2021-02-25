@@ -12,6 +12,13 @@ namespace LogicBoard.Model.ScreenLogic
         output,
         wire
     }
+    enum WireDirection
+    {
+        up,
+        down,
+        left,
+        right
+    }
     class Application
     {
         public Board board { get; set; }
@@ -194,15 +201,56 @@ namespace LogicBoard.Model.ScreenLogic
                     {
                         if (runBoard.Screen[i, j + 1] == '|') // input is false
                         {
-
+                            var endOfWire = FollowWire(i, j + 3, WireDirection.right);
                         }
                         else // input is true
                         {
-
+                            var endOfWire = FollowWire(i, j + 3, WireDirection.right);
                         }
                     }
                 }
             }
+        }
+        private int[] FollowWire(int xPosition, int yPosition, WireDirection direction)
+        {
+            var endOfWire = false;
+            while (!endOfWire)
+            {
+                switch(runBoard.Screen[xPosition, yPosition])
+                {
+                    case '─':
+                        if (direction == WireDirection.right) yPosition++;
+                        else yPosition--;
+                        break;
+                    case '│':
+                        if (direction == WireDirection.down) xPosition++;
+                        else xPosition--;
+                        break;
+                    case '┐':
+                        if (direction == WireDirection.up) yPosition--;
+                        else xPosition++;
+                        break;          
+                    case '┘':
+                        if (direction == WireDirection.down) yPosition--;
+                        else xPosition--;
+                        break;   
+                    case '┌':
+                        if (direction == WireDirection.up) yPosition++;
+                        else xPosition++;
+                        break;          
+                    case '└':
+                        if (direction == WireDirection.down) yPosition++;
+                        else xPosition--;
+                        break;
+                    case '>':
+                        endOfWire = true;
+                        break;
+                    default:
+                        endOfWire = true;
+                        break;
+                }
+            }
+            return new int[2] { xPosition, yPosition };
         }
         private void FindInputs(char letter)
         {

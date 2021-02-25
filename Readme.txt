@@ -20,7 +20,7 @@ D|>──────────>│&&
 This is the list of all logic gates, the program supports:  
   
 NOT  
-────────|>o───────  
+────────>o───────  
   
 AND  
 ───────>│&&  

@@ -18,9 +18,9 @@ namespace LogicBoard.Data
             {
             new Component(
                 ComponentType.NOT,
-                new char[1,3]{ { '|', '>', 'o' } },
+                new char[1,2]{ { '>', 'o' } },
                 new InputOutput[1]{ new InputOutput(0, 0) },
-                new InputOutput[1]{ new InputOutput(0, 2) }),
+                new InputOutput[1]{ new InputOutput(0, 1) }),
 
             new Component(
                 ComponentType.AND,
