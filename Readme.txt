@@ -59,7 +59,7 @@ Switch
 Off  
 A|>  
 On  
-A->  
+A─>  
   
   
 This is the list of all outputs, the program supports:  

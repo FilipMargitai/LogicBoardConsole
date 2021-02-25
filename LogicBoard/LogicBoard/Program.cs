@@ -18,11 +18,17 @@ namespace LogicBoard
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Key inputs - arrows to move, g for gates, i for inputs, o for outputs, w for wires, spacebar or enter for placing,\ndelete to delete");
-                ConsolePrint.PrintBoard(app.board);
-                ConsolePrint.PrintCursor(app);
+                Console.WriteLine("Key inputs - arrows to move, g for gates, i for inputs, o for outputs, w for wires, spacebar or enter for placing,\ndelete to delete, r to run the circuit");
+                if (app.debugMode) ConsolePrint.PrintBoard(app.runBoard);
+                else
+                {
+                    ConsolePrint.PrintBoard(app.board);
+                    ConsolePrint.PrintCursor(app);
+                }
+                Console.SetCursorPosition(app.board.y_Size, app.board.x_Size);
                 userInput = keyboardInputs.PressKey();
                 app.DoUserInput(userInput);
+
             }
 
             //foreach (var item in test.LogicGates)

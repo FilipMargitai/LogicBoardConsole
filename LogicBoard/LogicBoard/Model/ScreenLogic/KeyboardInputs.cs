@@ -16,6 +16,11 @@ namespace LogicBoard.Model.ScreenLogic
         wires,
         delete,
         action,
+        switchMode,
+        inputA,
+        inputB,
+        inputC,
+        inputD,
         invalid
     }
     class KeyboardInputs
@@ -47,7 +52,17 @@ namespace LogicBoard.Model.ScreenLogic
                 case ConsoleKey.Enter:
                     return keyAction.action;
                 case ConsoleKey.W:
-                    return keyAction.wires;
+                    return keyAction.wires;          
+                case ConsoleKey.R:
+                    return keyAction.switchMode;     
+                case ConsoleKey.A:
+                    return keyAction.inputA;
+                case ConsoleKey.B:
+                    return keyAction.inputB;
+                case ConsoleKey.C:
+                    return keyAction.inputC;          
+                case ConsoleKey.D:
+                    return keyAction.inputD;
                 default:
                     return keyAction.invalid;
             }
