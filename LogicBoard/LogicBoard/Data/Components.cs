@@ -77,6 +77,21 @@ namespace LogicBoard.Data
                 ComponentType.Switch,
                 new char[1,3]{ { 'A', '|', '>' } },
                 new InputOutput[0],
+                new InputOutput[1]{ new InputOutput(0, 2) }),
+            new Component(
+                ComponentType.Switch,
+                new char[1,3]{ { 'B', '|', '>' } },
+                new InputOutput[0],
+                new InputOutput[1]{ new InputOutput(0, 2) }),
+            new Component(
+                ComponentType.Switch,
+                new char[1,3]{ { 'C', '|', '>' } },
+                new InputOutput[0],
+                new InputOutput[1]{ new InputOutput(0, 2) }),
+            new Component(
+                ComponentType.Switch,
+                new char[1,3]{ { 'D', '|', '>' } },
+                new InputOutput[0],
                 new InputOutput[1]{ new InputOutput(0, 2) })
             };
             Outputs = new List<Component>()

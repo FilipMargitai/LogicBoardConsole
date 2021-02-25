@@ -11,13 +11,14 @@ namespace LogicBoard
         static void Main(string[] args)
         {
             var keyboardInputs = new KeyboardInputs();
-            var app = new Application(119, 29);
+            var app = new Application(119, 27);
 
             keyAction userInput = keyAction.invalid;
 
             while (true)
             {
                 Console.Clear();
+                Console.WriteLine("Key inputs - arrows to move, g for gates, i for inputs, o for outputs, w for wires, spacebar or enter for placing,\ndelete to delete");
                 ConsolePrint.PrintBoard(app.board);
                 ConsolePrint.PrintCursor(app);
                 userInput = keyboardInputs.PressKey();

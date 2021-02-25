@@ -43,7 +43,9 @@ namespace LogicBoard.Model.ScreenLogic
                 case ConsoleKey.Delete:
                     return keyAction.delete;     
                 case ConsoleKey.Spacebar:
-                    return keyAction.action;                
+                    return keyAction.action;
+                case ConsoleKey.Enter:
+                    return keyAction.action;
                 case ConsoleKey.W:
                     return keyAction.wires;
                 default:
