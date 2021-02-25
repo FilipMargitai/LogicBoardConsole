@@ -15,7 +15,8 @@ namespace LogicBoard.Model
         NOR,
         XNOR,
         LED,
-        Switch
+        Switch,
+        Wire
     }
     class Component
     {

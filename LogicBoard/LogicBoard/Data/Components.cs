@@ -8,8 +8,14 @@ namespace LogicBoard.Data
 {
     class Components
     {
-        public List<Component> LogicGates = new List<Component>()
+        public List<Component> LogicGates { get; }
+        public List<Component> Inputs { get; }
+        public List<Component> Outputs { get; }
+        public List<Component> Wires { get; }
+        public Components()
         {
+            LogicGates = new List<Component>()
+            {
             new Component(
                 ComponentType.NOT,
                 new char[1,3]{ { '|', '>', 'o' } },
@@ -64,22 +70,56 @@ namespace LogicBoard.Data
                 },
                 new InputOutput[2]{ new InputOutput(0, 0), new InputOutput(2, 0)},
                 new InputOutput[1]{ new InputOutput(1, 5) })
-        };
-        public List<Component> Input = new List<Component>()
-        {
+            };
+            Inputs = new List<Component>()
+            {
             new Component(
                 ComponentType.Switch,
                 new char[1,3]{ { 'A', '|', '>' } },
                 new InputOutput[0],
                 new InputOutput[1]{ new InputOutput(0, 2) })
-        };
-        public List<Component> Output = new List<Component>()
-        {
+            };
+            Outputs = new List<Component>()
+            {
             new Component(
                 ComponentType.LED,
                 new char[1,2]{ { '>', '░' } },
                 new InputOutput[1]{ new InputOutput(0, 0) },
                 new InputOutput[0])
-        };
+            };
+            Wires = new List<Component>()
+            {
+            new Component(
+                ComponentType.Wire,
+                new char[1,1]{ { '─' } },
+                new InputOutput[0],
+                new InputOutput[0]),
+            new Component(
+                ComponentType.Wire,
+                new char[1,1]{ { '│' } },
+                new InputOutput[0],
+                new InputOutput[0]),
+            new Component(
+                ComponentType.Wire,
+                new char[1,1]{ { '┌' } },
+                new InputOutput[0],
+                new InputOutput[0]),
+            new Component(
+                ComponentType.Wire,
+                new char[1,1]{ { '┐' } },
+                new InputOutput[0],
+                new InputOutput[0]),
+            new Component(
+                ComponentType.Wire,
+                new char[1,1]{ { '└' } },
+                new InputOutput[0],
+                new InputOutput[0]),
+            new Component(
+                ComponentType.Wire,
+                new char[1,1]{ { '┘' } },
+                new InputOutput[0],
+                new InputOutput[0])
+            };
+        }
     }
 }

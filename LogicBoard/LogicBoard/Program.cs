@@ -1,6 +1,7 @@
 ﻿using LogicBoard.Data;
 using LogicBoard.Model;
 using LogicBoard.Model.ConsolePrint;
+using LogicBoard.Model.ScreenLogic;
 using System;
 
 namespace LogicBoard
@@ -9,13 +10,19 @@ namespace LogicBoard
     {
         static void Main(string[] args)
         {
-            var test = new Components();
-            var testBoard = new Board(118, 30);
+            var keyboardInputs = new KeyboardInputs();
+            var app = new Application(119, 29);
 
-            testBoard.AddComponent(test.LogicGates[2], 0, 0);
-            testBoard.AddComponent(test.LogicGates[4], 1, 5);
-            ConsolePrint.PrintBoard(testBoard);
-            Console.ReadKey();
+            keyAction userInput = keyAction.invalid;
+
+            while (true)
+            {
+                Console.Clear();
+                ConsolePrint.PrintBoard(app.board);
+                ConsolePrint.PrintCursor(app);
+                userInput = keyboardInputs.PressKey();
+                app.DoUserInput(userInput);
+            }
 
             //foreach (var item in test.LogicGates)
             //{

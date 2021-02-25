@@ -12,7 +12,7 @@ namespace LogicBoard.Model
     }
     class Board
     {
-        public Board(int x_size, int y_size)
+        public Board(int y_size, int x_size)
         {
             x_Size = x_size;
             y_Size = y_size;
@@ -49,5 +49,6 @@ namespace LogicBoard.Model
                 InputsOrOutputs[IO.xPosition + xPosition, IO.yPosition + yPosition] = InputOrOutput.Output;
             }
         }
+        //public void DeleteComponent()
     }
 }
